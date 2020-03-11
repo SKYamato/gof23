@@ -1,7 +1,7 @@
 package co.zs._01singleton;
 
 /**
- * 饿汉式双重检测锁
+ * 懒汉式双重检测锁
  *
  * @author shuai
  * @date 2020/03/11 16:37
