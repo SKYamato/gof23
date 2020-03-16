@@ -1,6 +1,5 @@
 package co.zs._07chain_of_responsibility.my_servlet_filter;
 
-import co.zs._07chain_of_responsibility.dao.Msg;
 import co.zs._07chain_of_responsibility.my_servlet_filter.filter.impl.FilterChain;
 import co.zs._07chain_of_responsibility.my_servlet_filter.filter.impl.HTMLFilter;
 import co.zs._07chain_of_responsibility.my_servlet_filter.filter.impl.URLFilter;
@@ -19,7 +18,7 @@ public class Main {
         FilterChain filterChain = new FilterChain();
         filterChain.add(new HTMLFilter()).add(new URLFilter());
 
-        filterChain.doFilter(req,resp, filterChain);
+        filterChain.doFilter(req,resp);
         System.out.println(req.getMsg());
         System.out.println(resp.getMsg());
     }

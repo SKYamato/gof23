@@ -14,7 +14,7 @@ public class URLFilter implements Filter {
     public void doFilter(Request req, Response resp, FilterChain fc) {
         //处理req
         req.setMsg(req.getMsg() + " URLFilter - req ");
-        fc.doFilter(req,resp,fc);
+        fc.doFilter(req,resp);
         //处理resp
         resp.setMsg(resp.getMsg() + " URLFilter - resp ");
     }
