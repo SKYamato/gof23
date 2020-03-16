@@ -11,7 +11,7 @@ import java.util.List;
  * @author shuai
  * @date 2020/03/16 10:48
  */
-public class FilterChain implements Filter {
+public class FilterChain {
     /**
      * 传入的过滤器
      */
@@ -26,13 +26,12 @@ public class FilterChain implements Filter {
         return this;
     }
 
-    @Override
-    public void doFilter(Request req, Response resp, FilterChain fc) {
+    public void doFilter(Request req, Response resp) {
         if (index == filters.size()) {
             return;
         }
         Filter filter = filters.get(index);
         index++;
-        filter.doFilter(req, resp, fc);
+        filter.doFilter(req, resp, this);
     }
 }
