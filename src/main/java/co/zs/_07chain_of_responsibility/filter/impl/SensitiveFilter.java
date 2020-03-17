@@ -1,7 +1,7 @@
 package co.zs._07chain_of_responsibility.filter.impl;
 
 import co.zs._07chain_of_responsibility.filter.Filter;
-import co.zs._07chain_of_responsibility.dao.Msg;
+import co.zs._07chain_of_responsibility.filter.dao.Msg;
 
 /**
  * @author shuai
